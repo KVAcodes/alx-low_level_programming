@@ -4,4 +4,6 @@
 3 -Executable script that compiles a C file and creates an executable name cisfun
 4 -A C program that prints exactly "Programming is like building a multilingual puzzle using the function puts and not printf and the program ends with the value 0
 5 -A C program that prints exactly "with proper grammar, but the outcome is a piece of art" using the printf function and not puts and the program should return 0
-6 -A
+6 -A C program that prints the size of various types on the computer it is compiled and run on
+100 -A C program that generates the assembly code in Intekl syntax of a C code and save it in an output file
+101 - 
