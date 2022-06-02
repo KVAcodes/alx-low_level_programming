@@ -6,4 +6,4 @@
 5 -A C program that prints exactly "with proper grammar, but the outcome is a piece of art" using the printf function and not puts and the program should return 0
 6 -A C program that prints the size of various types on the computer it is compiled and run on
 100 -A C program that generates the assembly code in Intekl syntax of a C code and save it in an output file
-101 - 
+101 -A C program that prints exactly "and that piece of art is useful" - Dora Korpar, 2015-10-19" followed by a new to the stderr 
