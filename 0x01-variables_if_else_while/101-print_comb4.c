@@ -7,15 +7,27 @@
  */
 int main(void)
 {
-	int a;
+	int c, i, k;
 
-	for (a = '0'; a <= '9'; a++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		putchar(a);
-		if (a != '9')
+		for (i = '0'; i <= '9'; i++)
 		{
-			putchar(',');
-			putchar(' ');
+			for (k = '0'; k <= '9'; k++)
+			{
+				if (c < i && i < k)
+				{
+					putchar(c);
+					putchar(i);
+					putchar(k);
+
+					if (c != '7')
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
 		}
 	}
 	putchar('\n');
