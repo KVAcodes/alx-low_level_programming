@@ -1,4 +1,5 @@
-void _putcharPrinter(void)
-{
-	printf("_putchar\n");
-}
+void _putcharPrinter(void);
+int _putchar(char c);
+void print_alphabet(void);
+
+
