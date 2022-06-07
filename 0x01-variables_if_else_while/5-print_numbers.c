@@ -2,15 +2,15 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - The main Function
+ * main - The main Function prints all single digit numbers of base 10
  * Return: 0
  */
 int main(void)
 {
-	int i;
+	int x;
 
-	for (i = 0; i < 10; i++)
-		printf("%d", i);
-	printf("\n");
+	for (x = 48; x <= 57; x++)
+		putchar(x);
+	putchar('\n');
 	return (0);
 }

@@ -7,31 +7,27 @@
  */
 int main(void)
 {
-	int c, i, k;
+	int x, y, z = 48;
 
-	for (c = '0'; c <= '9'; c++)
+	for (x = 48; x <= 57; x++)
 	{
-		for (i = '0'; i <= '9'; i++)
-		{
-			for (k = '0'; k <= '9'; k++)
+		for(y = 48; y <= 57; y++)
+			for(z = 48; z <= 57; z++)
 			{
-				if (c < i && i < k)
+				if ((x != y && y != z) && (x < y && y < z))
 				{
-					putchar(c);
-					putchar(i);
-					putchar(k);
-
-					if (c != '7')
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(x);
+					putchar(y);
+					putchar(z);
+				}
+				if ((x != y && y != z) && (x < y && y < z) && x != 55)
+				{
+					putchar(',');
+					putchar(' ');
 				}
 			}
-		}
 	}
 	putchar('\n');
-
 	return (0);
 
 }

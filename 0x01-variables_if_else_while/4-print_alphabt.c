@@ -7,16 +7,14 @@
  */
 int main(void)
 {
-	char a, b, c;
+	int x = 97;
 
-	b = 'e';
-	c = 'q';
-
-	for (a = 'a'; a <= 'z'; a++)
+	while (x <= 122)
 	{
-		if (a != b && a != c)
-			putchar(a);
+		if (x != 101 && x != 113)
+			putchar(x);
+		x++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
