@@ -9,7 +9,7 @@ int main(void)
 
 	a = 0;
 	b = 1;
-	for (x = 0; y < 50; z++)
+	for (x = 0; x < 50; x++)
 	{
 		c = a + b;
 		a = b;
