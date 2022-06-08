@@ -2,20 +2,18 @@
 #include "main.h"
 /**
  * print_last_digit - aprints the last digit of a number
- * @nld: of int type
+ * @x: abs is of int type
  * Return: the value of the last digit
  */
-int print_last_digit(int nld)
+int print_last_digit(int x)
 {
-	int pld;
+	int lastdigit;
 
-	pld = (nld % 10);
+	lastdigit = x % 10;
 
-	if (pld < 0)
-	{
-		pld = (-1 * pld);
-	}
-
-	_putchar(pld + '0');
-	return (pld);
+	if (lastdigit > 0)
+		printf("%d", lastdigit);
+	else
+		printf("%d", lastdigit + (-2 * lastdigit));
+	return (lastdigit);
 }

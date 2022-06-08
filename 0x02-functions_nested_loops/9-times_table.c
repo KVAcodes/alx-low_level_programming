@@ -2,38 +2,44 @@
 #include <stdio.h>
 /**
  * times_table - prints the 9 times table, starting with 0
- * @x = row, y = column, z = digits of the current result
+ * @a = row, b = column, rep = digits of the current result
  * Return: void
  */
 void times_table(void)
 {
-	int x, y, z;
+	int a = 0;
+	int b;
+	int rep;
 
-	for (x = 0; y <= 9; z++)
+	while (a <= 9)
 	{
-		_putchar('0');
-		_putchar(',');
-		_putchar(' ');
-		for (y = 1; y <= 9; y++)
+		b = 0;
+		while (b <= 9)
 		{
-			z = (x * y);
-			if ((z / 10) > 0)
+			rep = a * b;
+			if (b == 0)
 			{
-				_putchar((z / 10) + '0');
+				_putchar('0' + rep);
+			}
+			else if (rep < 10)
+			{
+				_putchar(' ');
+				_putchar('0' + rep);
 			}
 			else
 			{
-				_putchar(' ');
+				_putchar('0' + rep / 10);
+				_putchar('0' + rep % 10);
 			}
-			_putchar((z % 10) + '0');
-
-			if (y < 9)
+			if (b < 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
+			b++;
 		}
 		_putchar('\n');
-
+		a++;
 	}
+
 }
