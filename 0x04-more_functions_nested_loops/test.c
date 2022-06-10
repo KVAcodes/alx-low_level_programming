@@ -3,6 +3,6 @@
 
 int main(void)
 {
-	_putchar('1');
+	_putchar(' ' * 52);
 	return (0);
 }
