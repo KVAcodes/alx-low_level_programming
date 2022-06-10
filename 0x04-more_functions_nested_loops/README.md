@@ -7,5 +7,5 @@
 6 - A function that draws a straight line in the terminal using _putchar function only to print
 7 - A function that draws a diagonal line on the terminal using only _putchar function
 8 - A function that prints a square using only _putchar function and the character #
-9 - A function
+9 - the FIZZ BUZZ TEST
 
