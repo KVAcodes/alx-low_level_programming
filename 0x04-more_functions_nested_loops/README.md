@@ -6,5 +6,6 @@
 5 - A function that prints 10 times the numbers, from 0 to 14 using _putchar function only three times
 6 - A function that draws a straight line in the terminal using _putchar function only to print
 7 - A function that draws a diagonal line on the terminal using only _putchar function
-8 - A
+8 - A function that prints a square using only _putchar function and the character #
+9 - A function
 
