@@ -5,3 +5,5 @@
 4 - A Function that prints a string in reverse followed by a new line
 5 - A Function that reverse a string
 6 - A Function that prints every other character of a string starting with the first character
+7 - A Function that prints half of a string, the second half of it and also if the no of the characters in the string is odd print the last n = (length_of_the_string - 1) / 2
+8 - A Function
