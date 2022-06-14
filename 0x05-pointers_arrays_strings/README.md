@@ -4,3 +4,4 @@
 3 - A Function that prints a string followed by a new line to stdout
 4 - A Function that prints a string in reverse followed by a new line
 5 - A Function that reverse a string
+6 - A Function that prints every other character of a string starting with the first character
