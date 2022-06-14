@@ -19,7 +19,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		y = (x + 1) / 2;
+		y = (x - 1) / 2;
 	}
 	for (z = y; z <= x; z++)
 	{
