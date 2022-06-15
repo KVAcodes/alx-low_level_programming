@@ -8,4 +8,4 @@
 7 - A Function that prints half of a string, the second half of it and also if the no of the characters in the string is odd print the last n = (length_of_the_string - 1) / 2
 8 - A Function that prints all the elements in a array of integers separated by a comma then a space.
 9 - A Function that copies the string pointed to by src including the terminating null byte '\0' to the buffer pointed to by dest and then return the pointer to byte
-100- A Fun
+100- A Function that converts a string to an integer with some condiitions
