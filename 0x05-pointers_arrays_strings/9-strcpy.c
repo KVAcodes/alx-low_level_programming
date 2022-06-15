@@ -1,18 +1,23 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strcpy -  a function that copies the string.
- * @dest : character value
- * @src  : character value
+ * @dest : string to copied to
+ * @src  : string to copu
  *
- *Return: return the pointer to desk.
+ *Return: the pointer to dest.
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i;
+	int x, y;
 
-	for (i = 0; src[i] != '\0'; i++)
-		dest[i] = src[i];
-	dest[i] = '\0';
+	for (x = 0; src[x] != 0; x++)
+	{
+	}
+	for (y = 0; y <= x; y++)
+	{
+		dest[y] = src[y];
+	}
 	return (dest);
 }
 
