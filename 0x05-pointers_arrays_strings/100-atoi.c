@@ -10,7 +10,7 @@ int _atoi(char *s)
 {
 	int x;
 	int signabs = 1;
-	int num = 0;
+	double num = 0;
 
 	for (x = 0; s[x] != 0; x++)
 	{
