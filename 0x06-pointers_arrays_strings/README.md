@@ -3,4 +3,4 @@
 2 - A Function that copies a string exactly like the strncpy library function.
 3 - A Function that compares two strings exactly like the strcmp library function.
 4 - A Function that reserves the content of an array of n integers.
-5 - A Function
+5 - A Function that changes all lowercase letters of a string to uppercase.
