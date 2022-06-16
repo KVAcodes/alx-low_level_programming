@@ -22,11 +22,10 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	if (i < n)
 	{
-		for (y = i; y <= n; y++)
+		for (y = i; y < n; y++)
 		{
 			dest[y] = '\0';
 		}
 	}
-
 	return (dest);
 }
