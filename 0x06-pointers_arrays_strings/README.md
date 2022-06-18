@@ -6,3 +6,6 @@
 5 - A Function that changes all lowercase letters of a string to uppercase.
 6 - A Function that capitalizes all words of a string, all words after word separators.
 7 - A Function that encodes a string into 1337 (leet).
+8 - A Function that encodes a string using rot13.
+9 - 
+

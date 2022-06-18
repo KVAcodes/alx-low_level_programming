@@ -3,25 +3,24 @@
 
 /**
  * rot13 - encodes a string into rot13
- * @s: the  string to encode
+ * @str: the  string to encode
  * Return: address of s
  */
-char *rot13(char *s)
+char *rot13(char *str)
 {
-	int i, j;
-	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int x, y;
+	char testarray1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char testarray2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (i = 0; *(s + i); i++)
+	for (x = 0; str[x] != 0; x++)
 	{
-		for (j = 0; j < 52; j++)
+		for (y = 0; testarray1[y] != 0; y++)
 		{
-			if (a[j] == *(s + i))
+			if (str[x] == testarray1[y])
 			{
-				*(s + i) = b[j];
-				break;
+				str[x] = testarray2[y];
 			}
 		}
 	}
-	return (s);
+	return (str);
 }
