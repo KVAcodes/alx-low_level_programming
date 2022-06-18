@@ -13,7 +13,7 @@ char *cap_string(char *str)
 			     '"', '(', ')', '{', '}'};
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (x = 0; testarray[x] != 0; x++)
+		for (x = 0; x <= 12; x++)
 		{
 			if ((str[i] == testarray[x]) && (str[i + 1] >= 97 && str[i + 1] <= 122))
 			{
