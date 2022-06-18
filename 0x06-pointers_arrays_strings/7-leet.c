@@ -8,23 +8,20 @@
  */
 char *leet(char *str)
 {
-	int i, j;
-	char c[] = "aAeEoOtTlL";
-	char n[] = "4433007711";
+	int x, y;
 
-	i = 0;
-	while (str[i] != '\0')
+	char testarray1[] = "aAeEoOtTlL";
+	char testarray2[] = "4433007711";
+
+	for (x = 0; str[x] != 0; x++)
 	{
-		j = 0;
-		while (c[j] != '\0')
+		for (y = 0; testarray1[y] != 0; y++)
 		{
-			if (str[i] == c[j])
+			if (str[x] == testarray1[y])
 			{
-				str[i] = n[j];
+				str[x] = testarray2[y];
 			}
-			j++;
 		}
-		i++;
 	}
 	return (str);
 }
