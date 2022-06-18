@@ -20,6 +20,7 @@ char *leet(char *str)
 			if (str[x] == testarray1[y])
 			{
 				str[x] = testarray2[y];
+				break;
 			}
 		}
 	}
