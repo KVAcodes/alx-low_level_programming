@@ -5,4 +5,5 @@ The following tasks have underlying code restrictions not stated here;
     A function that copies memory area
 2 - strchr
     A function that locates a character in a string
-3 -
+3 - strspn
+    A function that gets the length of a prefix substring
