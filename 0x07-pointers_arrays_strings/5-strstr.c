@@ -16,17 +16,16 @@ char *_strstr(char *haystack, char *needle)
 	for (y = 0; needle[y] != 0; y++)
 	{
 	}
-	for (i = 0; haystack[i] >= 0; i++)
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
 		if (haystack[i] == needle[0])
 		{
-			for (x = i + 1; x < i + y; x++)
+			for (x = i + 1; x < i + y; x++, z++)
 			{
 				if (haystack[x] == needle[z])
 				{
 					test += 1;
 				}
-				z++;
 			}
 			if (test == y - 1)
 			{
