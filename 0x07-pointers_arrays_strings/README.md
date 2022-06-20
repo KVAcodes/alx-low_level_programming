@@ -3,4 +3,6 @@ The following tasks have underlying code restrictions not stated here;
     A function that fills memory with a constant byte
 1 - memcpy
     A function that copies memory area
-2 -
+2 - strchr
+    A function that locates a character in a string
+3 -
