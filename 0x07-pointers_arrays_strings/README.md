@@ -9,4 +9,6 @@ The following tasks have underlying code restrictions not stated here;
     A function that gets the length of a prefix substring
 4 - strpbrk
     A function that searches a string for any set of bytes
-5 - 
+5 - strstr
+    A function that locates a substring
+6 -
