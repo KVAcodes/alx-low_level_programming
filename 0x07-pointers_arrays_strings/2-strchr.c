@@ -9,7 +9,11 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-
+	/**
+	 * The condition used in the for loop ensures that
+	 * the address of s + i is returned even if one or more \0 characters
+	 * are placed before the char c
+	 */
 	for (i = 0; s[i] >= '\0'; i++)
 	{
 		if (s[i] == c)
