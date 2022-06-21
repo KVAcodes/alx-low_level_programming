@@ -8,21 +8,34 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+	int i, x, z;
+	int y = 0;
+	int test = 0;
 
-	for (i = 0; haystack[i] > '\0'; i++)
+	for (z = 0; needle[z] != 0; z++)
 	{
-		for (j = i; haystack[j] > '\0' && needle[j - i] > '\0'; j++)
+	}
+	for (x = 0; haystack[x] != '\0'; x++)
+	{
+		if (haystack[x] == needle[y])
 		{
-			if (haystack[j] != needle[j - i])
+			for (i = x; i < x + z; i++)
 			{
-				break;
+				if (haystack[i] == needle[y])
+				{
+					test += 1;
+				}
+				y++;
+			}
+			if (test == z)
+			{
+				return (&haystack[x]);
+			}
+			else
+			{
+				continue;
 			}
 		}
-		if (needle[j - i] == '\0')
-		{
-			return (haystack + i);
-		}
 	}
-	return (0);
+	return ('\0');
 }
