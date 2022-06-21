@@ -8,7 +8,7 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, x, z, p;
+	int z, p, x, i;
 	int y = 0;
 	int test = 0;
 
@@ -40,5 +40,5 @@ char *_strstr(char *haystack, char *needle)
 			}
 		}
 	}
-	return ('\0');
+	return (NULL);
 }
