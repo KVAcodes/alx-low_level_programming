@@ -10,6 +10,7 @@
 int aidMethod(int modValue, int divValue)
 {
 	int amountOfCoins = 0;
+
 	if (divValue > 0)
 	{
 		amountOfCoins += divValue;
@@ -64,6 +65,7 @@ int main(int argc, char *argv[])
 		if (cents < 0)
 		{
 			printf("%d\n", 0);
+			return (1);
 		}
 		else if (cents == 0)
 		{
