@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 		}
 		else if (cents == 0)
 		{
-			printf("%d\n", 0);
+			amountOfCoins = 0;
 		}
 		else
 		{
