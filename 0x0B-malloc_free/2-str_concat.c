@@ -10,9 +10,9 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int a, x, y, z;
-	int b = 0;
+	int a, b, x, y, z;
 	char *s;
+	b = 0;
 
 	if (s1 == NULL)
 	{
@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	z = x + y + 1;
 
-	s =(char *) malloc(z * sizeof(char));
+	s = (char *)malloc(z * sizeof(char));
 	if (s == NULL)
 	{
 		return (NULL);
