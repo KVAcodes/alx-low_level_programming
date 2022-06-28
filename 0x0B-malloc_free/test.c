@@ -3,8 +3,9 @@
 int main(void)
 {
 	int i;
-	char *str = "Holberton";
-	for (i = 0; str[i]; i++);
-	printf("%ld\n", * sizeof(char));
-	return (0);
+	char *str = "";
+	for (i = 0; str[i] != 0; i++)
+	{
+	}
+	printf("%d\n", i);
 }
