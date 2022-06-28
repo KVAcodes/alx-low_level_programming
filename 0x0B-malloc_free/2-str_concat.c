@@ -13,14 +13,14 @@ char *str_concat(char *s1, char *s2)
 	int a, b, x, y, z;
 	char *s;
 
-	/*if (s1 == NULL)
+	if (s1 == NULL)
 	{
 		s1 = "";
 	}
 	else if (s2 == NULL)
 	{
 		s2 = "";
-	}*/
+	}
 	for (x = 0; s1[x] != 0; x++)
 	{
 	}
@@ -30,7 +30,10 @@ char *str_concat(char *s1, char *s2)
 	z = x + y + 1;
 
 	s = malloc(z * sizeof(char));
-
+	if (s == NULL)
+	{
+		return (NULL);
+	}
 	for (a = 0; s1[a] != 0; a++)
 	{
 		s[a] = s1[a];

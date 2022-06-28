@@ -3,9 +3,13 @@
 int main(void)
 {
 	int i;
-	char *str = "";
-	for (i = 0; str[i] != 0; i++)
+	char *str = NULL;
+	if (str[0] == '\0')
 	{
+		printf("yes\n");
 	}
-	printf("%d\n", i);
+	else
+	{
+		printf("no\n");
+	}
 }
