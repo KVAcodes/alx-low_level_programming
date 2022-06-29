@@ -2,8 +2,6 @@
 #include <stdlib.h>
 int main(void)
 {
-	char *str = "Holberton";
-	str = "";
-	printf("%s\n", str);
+	printf("%ld\n", sizeof(int *));
 	return (0);
 }
