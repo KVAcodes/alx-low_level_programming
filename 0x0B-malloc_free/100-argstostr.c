@@ -10,10 +10,11 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int a, b, c, d, x, y;
+	int a, b, c, d, x, y, z;
 	char *new;
 
 	c = 0;
+	z = 0;
 
 	if (ac == 0 || av == NULL)
 	{
@@ -23,10 +24,11 @@ char *argstostr(int ac, char **av)
 	{
 		for (y = 0; *(*(av + x) + y) != 0; y++)
 		{
+			z++;
 		}
 	}
-	a = y + ac;
-	new = malloc(a * sizeof(int));
+	a = z + ac;
+	new = malloc(a * sizeof(char));
 	if (new == NULL)
 	{
 		return (NULL);
