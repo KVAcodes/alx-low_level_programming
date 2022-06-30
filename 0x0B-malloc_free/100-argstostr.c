@@ -4,44 +4,43 @@
 
 /**
  * argstostr - concatenates all the arguments of your program
- *@ac: number of arguments
- *@av: arguments
+ * @ac: number of arguments
+ * @av: array arguments
  * Return: a pointer to a new string
  */
 char *argstostr(int ac, char **av)
 {
-	int i;
-	int j;
-	char *p = NULL;
-	int k;
-	int ext;
+	int a, b, c, d, x, y;
+	char *new;
 
-	k = 0;
-	ext = 0;
+	c = 0;
+
 	if (ac == 0 || av == NULL)
-		return (NULL);
-	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
+		return (NULL);
+	}
+	for (x = 0; x < ac; x++)
+	{
+		for (y = 0; *(*(av + x) + y) != 0; y++)
 		{
-			ext++;
 		}
 	}
-
-	p = (char *)malloc(ext + ac + 1 * sizeof(char));
-	if (p == NULL)
-		return (NULL);
-	for (i = 0; i < ac; i++)
+	a = y + ac;
+	new = malloc(a * sizeof(int));
+	if (new == NULL)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
-		{
-			p[k] = av[i][j];
-			k++;
-		}
-		p[k] = '\n';
-		k++;
+		return (NULL);
 	}
-	p[k] = '\0';
-	return (p);
+	for (b = 0; b < ac; b++)
+	{
+		for (d = 0; *(*(av + b) + d) != 0; d++)
+		{
+			*(new + c) = *(*(av + b) + d);
+			c++;
+		}
+		*(new + c) = '\n';
+		c++;
+	}
+	return (new);
 }
 

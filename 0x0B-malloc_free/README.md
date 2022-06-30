@@ -4,3 +4,5 @@ Note that each task has underlying instructions not stated in this README
 2 - A function that concatenates two strings.
 3 - A function that returns a pointer to a 2 dimensional array of integers.
 4 - A function that frees a 2 dimensional grid previously created by the alloc_grid function.
+5 - A function that concatenates all the arguments of your program.
+6 - A
