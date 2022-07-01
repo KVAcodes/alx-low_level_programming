@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 /**
  * string_nconcat - concatenates string with n bytes of
  * another
@@ -12,34 +13,37 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, j, k;
+	unsigned int var1, var2, var3;
 	char *s;
 
+	var3 = 0;
 	if (s1 == NULL)
-		i = 0;
-	else
 	{
-		for (i = 0; s1[i]; i++)
-		{
-		}
+		s1 = "";
 	}
 	if (s2 == NULL)
-		j = 0;
-	else
 	{
-		for (j = 0; s2[j]; j++)
-		{
-		}
+		s2 = "";
 	}
-	if (j > n)
-		j = n;
-	s = malloc(sizeof(char) * (i + j + 1));
+	var1 = strlen(s1);
+	if (n >= strlen(s2))
+	{
+		n = strlen(s2);
+	}
+	s = malloc(var1 + n + 1);
 	if (s == NULL)
+	{
 		return (NULL);
-	for (k = 0; k < i; k++)
-		s[k] = s1[k];
-	for (k = 0; k < j; k++)
-		s[k + i] = s2[k];
-	s[i + j] = '\0';
+	}
+	for (var2 = 0; var2 < var1; var2++)
+	{
+		s[var2] = s1[var2];
+	}
+	for (; var2 < var1 + n || var3 < n - 1; var2++)
+	{
+		s[var2] = s2[var3];
+		var3++;
+	}
+	s[var2] = '\0';
 	return (s);
 }
