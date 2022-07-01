@@ -39,7 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s[var2] = s1[var2];
 	}
-	for (; var2 < var1 + n && var3 < n && s2[var3] != 0; var2++)
+	for (; var2 < var1 + n; var2++)
 	{
 		s[var2] = s2[var3];
 		var3++;
