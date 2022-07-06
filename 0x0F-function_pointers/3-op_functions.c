@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "3-calc.h"
+#include <stdlib.h>
 /**
  * op_add - sums a and b
  * @a: first integer
@@ -42,6 +43,7 @@ int op_div(int a, int b)
 	{
 		printf("Error\n");
 		exit(100);
+	}
 	return (a / b);
 }
 /**
