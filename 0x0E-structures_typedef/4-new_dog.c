@@ -3,48 +3,27 @@
 #include "dog.h"
 
 /**
- * new_dog - creates a new dog
+ * new_dog - this funciton creates a new dog struct of type dog_t storing the
+ * a copy of name and owner in it.
  * @name: dog's name
  * @age: dog's age
  * @owner: dog's owner
  *
- * Return: a pointer to the structure
+ * Return: a pointer to the structure of type dog_t
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i, j, k;
-	dog_t *p;
+	dog_t *dogpoint;
 
-	p = malloc(sizeof(dog_t));
-
-	if (p == NULL)
+	(void)(age);
+	dogpoint = malloc(sizeof(dog_t));
+	if (dogpoint == NULL)
 	{
-		free(p);
 		return (NULL);
 	}
-	for (i = 0; name[i]; i++)
-		;
-	for (j = 0; owner[j]; j++)
-		;
-	p->name = malloc(i + 1);
-	p->owner = malloc(j + 1);
-
-	if (p->name == NULL || p->owner == NULL)
-	{
-		free(p->name), free(p->owner), free(p);
-		return (NULL);
-	}
-	for (k = 0; k < i; k++)
-	{
-		p->name[k] = name[k];
-	}
-	p->name[k] = '\0';
-	for (k = 0; k < j; k++)
-	{
-		p->owner[k] = owner[k];
-	}
-	p->owner[k] = '\0';
-	p->age = age;
-	return (p);
+	dogpoint->name = name;
+	dogpoint->owner = owner;
+	dogpoint->age = age;
+	return (dogpoint);
 }

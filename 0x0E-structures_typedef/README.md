@@ -6,4 +6,6 @@
 	a function that prints a struct dog.
 3 - dog.h (contd)
 	Define a new type dog_t as a name for the type struct dog.
-4 -
+4 - new_dog.c
+	A function that creates a new dog.
+5
