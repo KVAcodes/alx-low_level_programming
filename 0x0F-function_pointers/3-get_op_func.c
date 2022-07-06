@@ -14,6 +14,8 @@ int (*get_op_func(char *s))(int, int)
 	char *test = "+-*/%";
 	int (*funcPntArr[])(int, int) = {op_add, op_sub, op_mul, op_div, op_mod};
 	var1 = 0;
+	if (s)
+	{
 	while (test[var1] != 0)
 	{
 		if (s[0] == test[var1])
@@ -21,6 +23,7 @@ int (*get_op_func(char *s))(int, int)
 			return (funcPntArr[var1]);
 		}
 		var1++;
+	}
 	}
 	return (NULL);
 }
