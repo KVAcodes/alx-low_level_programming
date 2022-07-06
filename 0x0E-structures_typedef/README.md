@@ -4,4 +4,6 @@
 	a function that initializes a variable of type struct dog.
 2 - print_dog.c
 	a function that prints a struct dog.
-3 -
+3 - dog.h (contd)
+	Define a new type dog_t as a name for the type struct dog.
+4 -
