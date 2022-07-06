@@ -24,16 +24,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	dogpoint->name = malloc(sizeof(name));
-	if (name == NULL)
+	if (dogpoint->name == NULL)
 	{
 		free(dogpoint);
 		return (NULL);
 	}
 	dogpoint->owner = malloc(sizeof(owner));
-	if (owner == NULL)
+	if (dogpoint->owner == NULL)
 	{
-		free(dogpoint->name);
 		free(dogpoint);
+		free(dogpoint->name);
 		return (NULL);
 	}
 	for (var3 = 0; name[var3]; var3++)
