@@ -2,5 +2,7 @@
 	a function that prints all the elements of a (struct listint_t) list.
 1 - listint_len.c
 	a function that returns the number of elements in a linked (struct listint_t) list.
-2 -
+2 - add_nodeint.c
+	a function that adds a new node at the beginning of a (struct listint_t) list.
+3 -
 	
