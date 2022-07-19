@@ -4,5 +4,7 @@
 	a function that returns the number of elements in a linked (struct listint_t) list.
 2 - add_nodeint.c
 	a function that adds a new node at the beginning of a (struct listint_t) list.
-3 -
+3 - add_nodeint_end.c
+	a function that adds a new node at the end of a (struct listint_t) list.
+4 -
 	
