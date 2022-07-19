@@ -18,5 +18,7 @@
 	a function that returns the sum of all the data (n) of a (struct listint_t) linked list.
 9 - insert_nodeint.c
 	a function that inserts a new node at a given index position in the list.
-10 -
+10 - delete_nodeint.c
+	a function that deletes the node at index (index) of a (struct listint_t) linked list.
+100 -
 	
