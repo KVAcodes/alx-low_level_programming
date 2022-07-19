@@ -8,5 +8,9 @@
 	a function that adds a new node at the end of a (struct listint_t) list.
 4 - free_listint.c
 	a function that frees a (struct listint_t) list.
-5 -
+5 - free_listint2.c
+	a function that frees a (struct listint_t) list and sets the head pointer to NULL.
+6 - pop_listint.c
+	a function that deletes the head node of a (struct listint_t) linked list and returns the head node's data(n).
+7 -
 	
