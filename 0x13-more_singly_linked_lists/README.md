@@ -16,5 +16,7 @@
 	a function that returns the nth node(it's address) of a (struct listint_t) linked list.
 8 - sum_listint.c
 	a function that returns the sum of all the data (n) of a (struct listint_t) linked list.
-9 -
+9 - insert_nodeint.c
+	a function that inserts a new node at a given index position in the list.
+10 -
 	
