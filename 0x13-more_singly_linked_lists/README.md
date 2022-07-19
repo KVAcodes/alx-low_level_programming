@@ -12,5 +12,7 @@
 	a function that frees a (struct listint_t) list and sets the head pointer to NULL.
 6 - pop_listint.c
 	a function that deletes the head node of a (struct listint_t) linked list and returns the head node's data(n).
-7 -
+7 - get_nodeint.c
+	a function that returns the nth node(it's address) of a (struct listint_t) linked list.
+8 - 
 	
