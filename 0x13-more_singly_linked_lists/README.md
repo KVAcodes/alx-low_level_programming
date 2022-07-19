@@ -1,3 +1,5 @@
+MANDATORY
+
 0 - print_listint.c
 	a function that prints all the elements of a (struct listint_t) list.
 1 - listint_len.c
@@ -20,7 +22,12 @@
 	a function that inserts a new node at a given index position in the list.
 10 - delete_nodeint.c
 	a function that deletes the node at index (index) of a (struct listint_t) linked list.
+
+ADVANCED
+
 100 - reverse_listint.c
 	a function that reverses a (struct listint_t) linked list.
-101 - 
+101 - print_listint_safe.c
+	a function that prints a listint_t linked list in a "safe way".
+102 -
 	
