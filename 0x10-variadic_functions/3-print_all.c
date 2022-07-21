@@ -1,84 +1,85 @@
-#include "variadic_functions.h"
 #include <stdio.h>
-#include <stdarg.h>
 
+#include <stdarg.h>
+#include "variadic_functions.h"
 /**
- * print_char - entry va_list like type
- * @c: get va_list
+ * print_char - prints a char
+ * @allForOne: the character
  */
 void print_char(va_list c)
 {
 	printf("%c", va_arg(c, int));
 }
 /**
- * print_int - entry va_list like type
- * @i: get va_list
+ * print_int - prints an integer
+ * @allForOne: the integer
  */
 void print_int(va_list i)
 {
-	printf("%i", va_arg(i, int));
+	printf("%d", va_arg(i, int));
 }
 /**
- * print_float - entry va_list like type
- * @f: get va_list
+ * print_float - prints a float
+ * @allForOne: the float
  */
 void print_float(va_list f)
 {
 	printf("%f", va_arg(f, double));
 }
 /**
- * print_string - entry va_list like type
- * @s: get va_list
+ * print_string - prints a string
+ * @allForOne: the string
  */
 void print_string(va_list s)
 {
-	char *str = va_arg(s, char *);
-
-	if (str != NULL)
+	if (s == NULL)
 	{
-		printf("%s", str);
-		return;
+		printf("(nil)");
 	}
-	printf("(nil)");
+	else
+	{
+	printf("%s", va_arg(s, char *));
+	}
 }
 /**
- * print_all - entry arguments
- * @format: get quantity aarguments
+ * print_all - prints of anything or any type
+ * @format: a list of types of arguments passed to the function
+ *
+ * Return (0);
  */
 void print_all(const char * const format, ...)
 {
-	format_t type[] = {
-		{"c", print_char},
-		{"i", print_int},
-		{"f", print_float},
-		{"s", print_string},
-		{NULL, NULL}
-	};
+	int var1, var2;
+	va_list allForOne;
+	char *separator = "";
 
-	va_list args;
-	int i, j;
-	char *sp = "";
+	match matcharr[] = {
+				{'c', print_char},
+				{'i', print_int},
+				{'f', print_float},
+				{'s', print_string},
+				};
 
-	va_start(args, format);
-	i = 0;
-	while (format && format[i])
+	va_start(allForOne, format);
+
+	var1 = 0;
+
+	while (format[var1])
 	{
-		j = 0;
-		while (j < 4)
+		var2 = 0;
+		while (var2 < 4)
 		{
-
-			if (type[j].t[0] == format[i])
+			if (format[var1] == matcharr[var2].c)
 			{
-				printf("%s", sp);
-				type[j].f(args);
-				sp = ", ";
-				break;
-
+				printf("%s", separator);
+				matcharr[var2].ptr(allForOne);
+				separator = ", ";
 			}
-			j++;
+			var2++;
 		}
-		i++;
+		var1++;
 	}
 	printf("\n");
-	va_end(args);
+	va_end(allForOne);
 }
+

@@ -1,52 +1,26 @@
 #include "main.h"
 #include <stdlib.h>
-
-int word_len(char *str);
-int count_words(char *str);
-char **strtow(char *str);
-
+#include <stdio.h>
 /**
- * word_len - Locates the index marking the end of the
- *            first word contained within a string.
- * @str: The string to be searched.
- *
- * Return: The index marking the end of the initial word pointed to by str.
+ * wordcount - counts the number of words in a string
+ * separated by whitespaces
+ * @str - The string
+ * Return: The numbers of words found
  */
-int word_len(char *str)
+int wordcount(char *str)
 {
-	int index = 0, len = 0;
+	int x, y;
 
-	while (*(str + index) && *(str + index) != ' ')
+	y = 0;
+
+	for (x = 0; str[x] != 0; x++)
 	{
-		len++;
-		index++;
-	}
-
-	return (len);
-}
-/**
- * count_words - Counts the number of words contained within a string.
- * @str: The string to be searched.
- *
- * Return: The number of words contained within str.
- */
-int count_words(char *str)
-{
-	int index = 0, words = 0, len = 0;
-
-	for (index = 0; *(str + index); index++)
-		len++;
-
-	for (index = 0; index < len; index++)
-	{
-		if (*(str + index) != ' ')
+		if (str[x] = 32 && str[x + 1] != 32)
 		{
-			words++;
-			index += word_len(str + index);
+			y++;
 		}
 	}
-
-	return (words);
+	return (y);
 }
 
 /**
@@ -58,44 +32,59 @@ int count_words(char *str)
  */
 char **strtow(char *str)
 {
-	char **strings;
-	int index = 0, words, w, letters, l;
+	int a, b, c, d, x, y, z;
+	int **arr;
 
-	if (str == NULL || str[0] == '\0')
-		return (NULL);
+	a = 0;
+	d = 0;
+	z = 0;
 
-	words = count_words(str);
-	if (words == 0)
-		return (NULL);
-
-	strings = malloc(sizeof(char *) * (words + 1));
-	if (strings == NULL)
-		return (NULL);
-
-	for (w = 0; w < words; w++)
+	if (str == NULL || str = "")
 	{
-		while (str[index] == ' ')
-			index++;
-
-		letters = word_len(str + index);
-
-		strings[w] = malloc(sizeof(char) * (letters + 1));
-
-		if (strings[w] == NULL)
-		{
-			for (; w >= 0; w--)
-				free(strings[w]);
-
-			free(strings);
-			return (NULL);
-		}
-
-		for (l = 0; l < letters; l++)
-			strings[w][l] = str[index++];
-
-		strings[w][l] = '\0';
+		return (NULL);
 	}
-	strings[w] = NULL;
-	return (strings);
+	x = wordcount(str);
+	arr = malloc(x * sizeof(*arr));
+	if (arr == NULL)
+	{
+		return (NULL);
+	}
+	for (x = 0; str[x] != 0; x++)
+	{
+		if (str[x] = 32 && str[x + 1] != 32)
+		{
+			for (y = x + 1; str[y] != 32; y++)
+			{
+				z++;
+			}
+			*(arr + a) = malloc((z + 1) * sizeof(char));
+			a++;
+			z = 0;
+		}
+	}
+	for (b = 0; str[b] != 0; b++)
+	{
+		if (str[b] = 32 && str[b + 1] != 32)
+		{
+			for (c = b + 1; str[c] != 32; c++)
+			{
+				for (d = 0; d < x; d++)
+				{
+
+					i
+						i
+				}
+
+		
+
+
+
 }
+
+
+
+
+
+
+
 

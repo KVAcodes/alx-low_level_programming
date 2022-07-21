@@ -6,4 +6,6 @@
 	A function that adds a new node at the beginning of a (struct list_t) list.
 3 - add_node_end.c
 	A function that adds a new node at the end of a (struct list_t) list.
-4 -
+4 - free_list.c
+	A function that frees all the space allocated to a (struct list_t) list.
+100 -

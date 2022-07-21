@@ -8,4 +8,5 @@ NOTE : Each program is built under restrictions communicated in the requirements
 6 -A Function that computes the absolute value of an integer.
 7 -A Function that prints the last digit of a number
 8 -A Function that prints every minute of the day of jack bauer, starting from 00:00 to 23:59
+9 -
 

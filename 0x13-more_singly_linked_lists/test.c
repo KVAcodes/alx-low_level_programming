@@ -52,29 +52,3 @@ size_t looped_list_length(listint_t *head)
 	}
 	exit(98);
 }
-/**
- * print_listint_safe - prints all the elements of a
- * listint_t singly linked list
- * @head: a pointer the first node of the list
- *
- * Return: the number of nodes in the list
- */
-size_t print_listint_safe(const listint_t *head)
-{
-	unsigned int var1, len;
-	listint_t *ptr = (listint_t *)head;
-
-	if (head == NULL)
-	{
-		exit(98);
-	}
-	len = looped_list_length(ptr);
-	var1 = 0;
-
-	while (var1 < len)
-	{
-		printf("[%p] %d\n", (void *)ptr, ptr->n);
-		var1++;
-	}
-	return (len);
-}
