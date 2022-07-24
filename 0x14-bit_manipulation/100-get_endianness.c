@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * get_endianness - retunrs the endian of the processor
  *
@@ -8,7 +7,6 @@
 
 int get_endianness(void)
 {
-	unsigned int i;
-
+	unsigned int i = 1;
 	return ((((char *)&i)[0]));
 }
