@@ -14,10 +14,13 @@ int create_file(const char *filename, char *text_content)
 {
 	ssize_t check;
 	int fd;
-	size_t len;
+	size_t len = 0;
 
-	for (len = 0 ; text_content[len] != 0; len++)
+	if (text_content != NULL)
 	{
+		for (; text_content[len] != 0; len++)
+		{
+		}
 	}
 
 	if (filename == NULL)
@@ -29,11 +32,6 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 	{
 		return (-1);
-	}
-
-	if (text_content == NULL)
-	{
-		return (1);
 	}
 
 	check = write(fd, text_content, len);
