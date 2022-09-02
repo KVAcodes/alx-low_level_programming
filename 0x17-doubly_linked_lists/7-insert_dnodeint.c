@@ -12,9 +12,15 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *node = get_pre_node(*h, idx), *new;
+	unsigned int count = 1;
+	dlistint_t *node = *h, *new;
 
-	if (node == NULL) /* index out of bounds */
+	while (count != idx && node)
+	{
+		node = node->next;
+		count++;
+	}
+	if (node == NULL)
 		return (NULL);
 	if (idx == 0)
 		return (add_dnodeint(h, n));
@@ -30,29 +36,4 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	node->next = new;
 
 	return (new);
-}
-/**
- * get_pre_node - returns the (index - 1)th node of a
- * dlistint_t linked list.
- * @head: pointer to the first node in the list.
- * @index: index of the post node, starting from 0.
- *
- * Return: the address of the (index - 1)th node, Otherwise
- * NULL if the node doesn't exist.
- */
-dlistint_t *get_pre_node(dlistint_t *head, unsigned int index)
-{
-	unsigned int count = 1;
-	dlistint_t *ret = NULL;
-
-	if (head == NULL)
-		return (NULL);
-	while (count != index && head)
-	{
-		head = head->next;
-		count++;
-	}
-	ret = count == index ? head : NULL;
-
-	return (ret);
 }
