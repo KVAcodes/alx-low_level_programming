@@ -12,11 +12,11 @@ Kadiri Victor.
 #### [1 - djb2.c](https://github.com/KVAcodes/alx-low_level_programming/blob/master/0x1A-hash_tables/1-djb2.c)
 #####	Write a hash function implementing the djb2 algorithm provided ALX.
 
-#### [2 - key_index.c]()
+#### [2 - key_index.c](https://github.com/KVAcodes/alx-low_level_programming/blob/master/0x1A-hash_tables/2-key_index.c)
 #####	Write a function that gives you the index of a key.
 
-#### []()
-#####	
+#### [3 - hash_table_set.c]()
+#####	Write a function that adds an element to the hash table.
 
 #### []()
 #####	
