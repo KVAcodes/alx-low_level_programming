@@ -15,11 +15,11 @@ Kadiri Victor.
 #### [2 - key_index.c](https://github.com/KVAcodes/alx-low_level_programming/blob/master/0x1A-hash_tables/2-key_index.c)
 #####	Write a function that gives you the index of a key.
 
-#### [3 - hash_table_set.c]()
+#### [3 - hash_table_set.c](https://github.com/KVAcodes/alx-low_level_programming/blob/master/0x1A-hash_tables/3-hash_table_set.c)
 #####	Write a function that adds an element to the hash table.
 
-#### []()
-#####	
+#### [4 - hash_table_get.c]()
+#####	Write a function that retrieves a value associated with a key.
 
 #### []()
 #####	
