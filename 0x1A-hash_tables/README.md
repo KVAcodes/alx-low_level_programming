@@ -23,5 +23,10 @@ Kadiri Victor.
 
 #### [5 - hash_table_print.c](https://github.com/KVAcodes/alx-low_level_programming/blob/master/0x1A-hash_tables/5-hash_table_print.c)
 #####	Write a function that prints a hash table.
+#### [6 - hash_table_delete.c](https://github.com/KVAcodes/alx-low_level_programming/blob/master/0x1A-hash_tables/6-hash_table_delete.c)
+#####	Write a function that deletes a hash table.
+
+### ADVANCED
+
 #### []()
-#####
+#####	
