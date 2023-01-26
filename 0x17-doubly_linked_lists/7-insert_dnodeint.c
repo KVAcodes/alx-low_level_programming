@@ -1,40 +1,41 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - Inserts a new node in a dlistint_t
- *                            list at a given position.
- * @h: A pointer to the head of the dlistint_t list.
- * @idx: The position to insert the new node.
- * @n: The integer for the new node to contain.
+ * insert_dnodeint_at_index - insets a new node at a given position.
+ * @h: address of the head pointer.
+ * @idx: index of insertion.
+ * @n: number to insert.
  *
- * Return: If the function fails - NULL.
- *         Otherwise - the address of the new node.
+ * Return: the address of the new node, or NULL if it fails
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int count = 1;
-	dlistint_t *node = *h, *new;
+	unsigned int count = 0;
+	dlistint_t *ptr = *h, *new = NULL;
 
 	if (idx == 0)
 		return (add_dnodeint(h, n));
 
-	while (count != idx && node)
-	{
-		node = node->next;
-		count++;
-	}
-	if (node == NULL)
-		return (NULL);
-	if (node->next == NULL)
-		return (add_dnodeint_end(h, n));
 	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
+	if (!new)
 		return (NULL);
 	new->n = n;
-	new->prev = node;
-	new->next = node->next;
-	node->next->prev = new;
-	node->next = new;
 
+	while (ptr && count < idx)
+	{
+		ptr = ptr->next;
+		count++;
+	}
+	if (!ptr)
+	{
+		free(new);
+		return (NULL);
+	}
+	if (!(ptr->next))
+		return (add_dnodeint_end(h, n));
+	new->next = ptr;
+	new->prev = ptr->prev;
+	ptr->prev->next = new;
+	ptr->prev = new;
 	return (new);
 }
