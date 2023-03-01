@@ -8,12 +8,14 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t **array = ht->array;
-	unsigned long int size = ht->size, count = 0, flag = 0;
+	hash_node_t **array;
+	unsigned long int size, count = 0, flag = 0;
 	hash_node_t *ptr = NULL;
 
 	if (!ht)
 		return;
+	array = ht->array;
+	size = ht->size;
 
 	printf("{");
 	while (count < size)
