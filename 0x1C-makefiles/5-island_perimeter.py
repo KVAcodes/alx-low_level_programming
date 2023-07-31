@@ -2,6 +2,7 @@
 """This module contains the island_perimeter function definition.
 """
 
+
 def return_perimeter_val(grid, row, col):
     """This Function returns the perimeter round each unit square
     Found in the grid.
@@ -16,6 +17,7 @@ def return_perimeter_val(grid, row, col):
     if not (row + 1 == len(grid) or grid[row + 1][col] == 0):
         sq_perimeter -= 1
     return sq_perimeter
+
 
 def island_perimeter(grid):
     """This function return the perimeter of the island described in
